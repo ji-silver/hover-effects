@@ -1,0 +1,7 @@
+@charset "utf-8";
+
+/* 여백 초기화 */
+body,div,ul,li,dl,dd,dt,ol,h1,h2,h3,h4,h5,h6,input,fieldset,legend,p,select,table,th,td,tr,textarea,button,form,figure,figcaption{margin:0; padding:0;}
+
+/* 블릿기호 초기화 */
+ul,li,ol {list-style:none;}
