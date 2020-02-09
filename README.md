@@ -2,7 +2,7 @@
 image hover effects <br>
 CodePen URL: https://codepen.io/ji-silver
   
-<h2><a href="https://ji-silver.github.io/hover-effects/index">Demo</a></h2>
+<h2><a href="https://ji-silver.github.io/hover-effects/index.html">Demo</a></h2>
 <ol>
   <li><a href="https://codepen.io/ji-silver/pen/JjdjgKd">Hover Effects01</a></li>
   <li><a href="https://codepen.io/ji-silver/pen/WNvbNXO">Hover Effects02</a></li>
