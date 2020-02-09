@@ -1,50 +1,52 @@
 @charset "utf-8";
 
-/* 가운데 영역 */
-.container {position: relative; max-width: 1000px; margin: 0 auto;}
-
-/* 로우 영역 */
-.row {padding: 0 28px;}
-
 body {
-    background: #0f2027;
-    background: linear-gradient(120deg, #2c5364, #203a43);
+    background: linear-gradient(120deg, #2C5364, #203A43, #0F2027);
 }
 .tit {
     font-size: 4em; color: #fff; 
     text-align: center; 
     margin: 0 auto; padding: 1em;
 }
+.container {max-width: 1000px; margin: 0 auto;}
+.row {padding: 0 28px;}
+
 h2 {
-    color: #ddd; font-weight: normal; 
+    color: #aaa; font-weight: normal; 
     padding: 3em 1% 0;
 }
 .hover_wrap {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
+    height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    perspective: 1000px;
+    padding: 1em 0 0;
 }
-.hover_wrap figure {
-    width: 48%;
-    margin: 10px;
+.hover_wrap .effect {
+  position: relative;
+  width: 500px; height: 400px; margin: 10px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+.hover_wrap > figure {
     position: relative;
+    width: 500px; height: auto; margin: 10px;
     cursor: pointer;
     overflow: hidden;
-    float: left;
 }
-.hover_wrap .ho2 {
+.hover_wrap .bg1 {
     background: linear-gradient(45deg, #874da2, #c43a30);
 }
-.hover_wrap .ho2::before {
+.hover_wrap .bg1::before {
     content: '';
     position: absolute; left: 100%; top: 50%; z-index: 1;
     width: 60px; height: 1px; background: #fff;
     transform: translate(-50%, -50%);
     transition: all 0.3s ease;
     opacity: 0;
-  }
-.hover_wrap .ho2::after {
+}
+.hover_wrap .bg1::after {
     content: '';
     position: absolute; left: 50%; top: 0%; z-index: 1;
     width: 1px; height: 60px; background: #fff;
@@ -52,34 +54,40 @@ h2 {
     transition: all 0.3s ease;
     opacity: 0;
 }
-.hover_wrap .ho3 {
+.hover_wrap .bg2 {
     background: #fff;
 }
-.hover_wrap figure img {
-    width: 100%;
-    display: block;
-    transition: all 0.3s ease;
+.hover_wrap .effect .front {
+  position: absolute; left: 0; top: 0; z-index: 10;
+  transform-style: preserve-3d;
 }
-.hover_wrap .ho3:hover img {
-    opacity: 0.1;
+.hover_wrap .effect .back {
+  position: absolute; left: 0; top: 0; 
+  transform-style: preserve-3d;
 }
-.hover_wrap figcaption {
+.hover_wrap .st1 {
     position: absolute; left: 0; bottom: 0;
     background: rgba(0,0,0,0.44);
     width: 100%;
     color: #fff; padding: 20px;
     box-sizing: border-box;
+    border-radius: 0 0 4px 4px;
 }
-.hover_wrap .ho3 figcaption {
+.hover_wrap .st1 h3 {
+    font-size: 24px; padding-bottom: 7px;
+}
+  .hover_wrap .st1 p {
+    font-size: 18px;
+}
+.hover_wrap .st3 {
     position: absolute;
     top: 0; right: 0; left: 0; bottom: 0;
     margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: none;
 }
-.hover_wrap .ho3 figcaption::before {
+.hover_wrap .st3::before {
     content: '';
     width: 150px; height: 150px;
     background: #000;
@@ -87,46 +95,29 @@ h2 {
     position: absolute; left: 50%; top: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
-  }
-.hover_wrap figcaption h3 {
-    font-size: 24px; padding-bottom: 7px;
 }
-.hover_wrap figcaption p {
-    font-size: 18px;
-}
-.hover_wrap figcaption strong {
+.hover_wrap .st3 strong {
     z-index: 20;
     color: #fff;
     text-transform: uppercase;
     font-size: 16px;
-}
-
-.hover_wrap2 {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	perspective: 1000px;
-}
-.hover_wrap2 .effect {
-    position: relative;
-    width: 48%; height: 350px; margin: 10px; float: left;
-}
-.hover_wrap2 .effect .front {
-    position: absolute; left: 0; top: 0; z-index: 10; transform-style: preserve-3d;
-}
-.hover_wrap2 .effect .back {
-    position: absolute; left: 0; top: 0; transform-style: preserve-3d;
-}
-.hover_wrap2 .effect .txt1 {
+  }
+.hover_wrap .effect .st4 {
     position: absolute; bottom: 0; left: 0;
     background: rgba(0,0,0,0.5);
     width: 100%; padding: 3% 4%;
     box-sizing: border-box;
     color: #fff;
 }
-.hover_wrap2 .effect .txt2 {
+.hover_wrap .effect .st4 h3 {
+    font-size: 24px; padding-bottom: 5px;
+}
+.hover_wrap .effect .st4 p {
+    font-size: 20px;
+}
+.hover_wrap .effect .st5 {
     position: absolute; left: 50%; top: 50%;
-    transform: translate(-50%, -50%) translatez(100px);
+    transform: translate(-50%, -50%) translatez(100px);   
     background: rgba(0,0,0,0.5);
     text-align: center;
     backface-visibility: hidden;
@@ -135,30 +126,27 @@ h2 {
     box-sizing: border-box;
     white-space: nowrap;
 }
-.hover_wrap2 .effect .txt1 h3 {
-    font-size: 24px; padding-bottom: 5px;
-}
-.hover_wrap2 .effect .txt1 p {
-    font-size: 20px;
-}
-.hover_wrap2 .effect .txt2 h3 {
+.hover_wrap .effect .st5 h3 {
     font-size: 30px; padding-bottom: 10px;
 }
-.hover_wrap2 .effect .txt2 p {
+.hover_wrap .effect .st5 p {
     font-size: 16px;
 }
-.hover_wrap2 .effect img {
-    width: 100%;
-    display: block;
+
+.hover_wrap img {
+  width: 100%;
+  display: block;
+  transition: all 0.3s ease;
 }
-
-
+.hover_wrap .bg2:hover img {
+    opacity: 0.1;
+  }
 
 /* hover effect1 */
 .hover_wrap figure.hover1 figcaption {opacity: 0; transition: opacity 0.33s ease-in-out;}
 .hover_wrap figure.hover1:hover figcaption {opacity: 1;}
 /* hover effect2 */
-.hover_wrap figure.hover2 figcaption{opacity: 0;transition: opacity 0.33s ease-in-out, bottom 0.33s ease; bottom: -100px;}
+.hover_wrap figure.hover2 figcaption{opacity: 0; transition: opacity 0.33s ease-in-out, bottom 0.33s ease; bottom: -100px}
 .hover_wrap figure.hover2:hover figcaption{opacity: 1; bottom: 0;}
 /* hover effect3 */
 .hover_wrap figure.hover3:hover img {opacity: 0.6;}
@@ -177,24 +165,29 @@ h2 {
 .hover_wrap .hover6 figcaption {transform: translatex(-80%) rotate(-180deg); transition: all 0.3s ease;}
 .hover_wrap .hover6:hover figcaption {transform: translatex(0%) rotate(0deg);}
 /* hover effect7 */
-.hover_wrap2 .effect.hover7 .front {transform: rotatey(0deg); transition: transform 1s; backface-visibility: hidden;}
-.hover_wrap2 .effect.hover7:hover .front {transform: rotatey(180deg);}
-.hover_wrap2 .effect.hover7 .back { transform: rotatey(-180deg); transition: transform 1s;}
-.hover_wrap2 .effect.hover7:hover .back {transform: rotatey(0deg);}
+.hover_wrap .effect.hover7 .front {transform: rotatey(0deg); transition: transform 1s; backface-visibility: hidden;}
+.hover_wrap .effect.hover7:hover .front {transform: rotatey(180deg);}
+.hover_wrap .effect.hover7 .back {transform: rotatey(-180deg); transition: transform 1s;}
+.hover_wrap .effect.hover7:hover .back {transform: rotatey(0deg);}
 /* hover effect8 */
-.hover_wrap2 .effect.hover8 .front {transform: rotatex(0deg); transition: transform 1s; backface-visibility: hidden;}
-.hover_wrap2 .effect.hover8:hover .front {transform: rotatex(180deg);}
-.hover_wrap2 .effect.hover8 .back {transform: rotatex(-180deg); transition: transform 1s;}
-.hover_wrap2 .effect.hover8:hover .back {transform: rotatex(0deg);}
-
+.hover_wrap .effect.hover8 .front {transform: rotatex(0deg); transition: transform 1s; backface-visibility: hidden;}
+.hover_wrap .effect.hover8:hover .front {transform: rotatex(180deg);}
+.hover_wrap .effect.hover8 .back {transform: rotatex(-180deg); transition: transform 1s;}
+.hover_wrap .effect.hover8:hover .back {transform: rotatex(0deg);}
 /* hover effect9 */
-.hover_wrap2 .effect.hover9 .front {transform: rotatey(0deg); transition: transform 1s; backface-visibility: hidden;}
-.hover_wrap2 .effect.hover9:hover .front {transform: rotatey(180deg);}
-.hover_wrap2 .effect.hover9 .back {transform: rotatey(-180deg); transition: transform 1s; backface-visibility: hidden;}
-.hover_wrap2 .effect.hover9:hover .back {transform: rotatey(0deg);} 
+.hover_wrap .effect.hover9 .front {transform: rotatey(0deg); transition: transform 1s; backface-visibility: hidden;}
+.hover_wrap .effect.hover9:hover .front {transform: rotatey(180deg);}
+.hover_wrap .effect.hover9 .back {transform: rotatey(-180deg); transition: transform 1s; backface-visibility: hidden;}
+.hover_wrap .effect.hover9:hover .back {transform: rotatey(0deg);}
 /* hover effect10 */
-.hover_wrap2 .effect.hover10 .front {transform: rotatex(0deg); transition: transform 1s; backface-visibility: hidden;}
-.hover_wrap2 .effect.hover10:hover .front {transform: rotatex(180deg);}
-.hover_wrap2 .effect.hover10 .back {transform: rotatex(-180deg); transition: transform 1s; backface-visibility: hidden;}
-.hover_wrap2 .effect.hover10:hover .back {transform: rotatex(0deg);}
+.hover_wrap .effect.hover10 .front {transform: rotatex(0deg); transition: transform 1s; backface-visibility: hidden;}
+.hover_wrap .effect.hover10:hover .front {transform: rotatex(180deg);}
+.hover_wrap .effect.hover10 .back {transform: rotatex(-180deg); transition: transform 1s; backface-visibility: hidden;}
+.hover_wrap .effect.hover10:hover .back {transform: rotatex(0deg);}
+    
+  /* Media quary */
+  @media (max-width: 700px){
+      .hover_wrap {flex-direction: column;}
+      h2 {text-align: center;}
+  }
   
