@@ -5,3 +5,26 @@ body,div,ul,li,dl,dd,dt,ol,h1,h2,h3,h4,h5,h6,input,fieldset,legend,p,select,tabl
 
 /* 블릿기호 초기화 */
 ul,li,ol {list-style:none;}
+
+/* a 링크 초기화 */
+a {text-decoration: none;}
+
+/* 초기화 */
+body {
+    background: linear-gradient(120deg, #2C5364, #203A43, #0F2027);
+}
+header {text-align: center; margin: 0 auto; }
+header h1{font-size: 4em; color: #fff; padding: 1em;}
+header ul li {display: inline;}
+header ul a.active {background: rgba(0,0,0,0.5); border-radius: 5px;}
+header ul a:hover {background: rgba(0,0,0,0.5); border-radius: 5px;}
+header ul li a {color: #fff; padding: 10px 20px; text-transform: uppercase; font-size: 15px; font-weight: bold;}
+
+
+.container {max-width: 1000px; margin: 0 auto;}
+.row {padding: 0 28px;}
+
+h2 {
+    color: #aaa; font-weight: normal; 
+    padding: 3em 1% 0;
+}
