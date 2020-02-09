@@ -172,5 +172,7 @@
   @media (max-width: 700px){
       .hover_wrap {flex-direction: column;}
       h2 {text-align: center;}
+      .hover_wrap figure {width: auto;}
+	.row {padding: 0 10px;}
   }
   
