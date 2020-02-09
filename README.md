@@ -9,4 +9,5 @@ CodePen URL: https://codepen.io/ji-silver
   <li><a href="https://codepen.io/ji-silver/pen/gOpbaRP">Hover Effects03</a></li>
   <li><a href="https://codepen.io/ji-silver/pen/OJVPggN">Hover Effects04</a></li>
   <li><a href="https://codepen.io/ji-silver/pen/LYVELrK">Hover Effects04</a></li>
+  <li><a href="https://codepen.io/ji-silver/pen/BaNyOyZ">Hover Effects05</a></li>
 </ol>
