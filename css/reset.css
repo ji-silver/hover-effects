@@ -13,7 +13,7 @@ a {text-decoration: none;}
 body {
     background: linear-gradient(120deg, #2C5364, #203A43, #0F2027);
 }
-header {text-align: center; margin: 0 auto; }
+header {text-align: center; margin: 0 auto; padding-bottom: 50px;}
 header h1{font-size: 4em; color: #fff; padding: 1em;}
 header ul li {display: inline; margin: 2px;}
 header ul li a.active {border: 2px solid #aaa; color: #aaa;}
@@ -26,5 +26,5 @@ header ul li a {color: #fff; padding: 9px 15px; text-transform: uppercase; font-
 
 h2 {
     color: #aaa; font-weight: normal; 
-    padding: 3em 1% 0;
+    padding: 2em 5% 0;
 }
